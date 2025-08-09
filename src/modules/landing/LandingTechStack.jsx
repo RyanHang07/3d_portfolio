@@ -64,7 +64,7 @@ const LandingTechStack = () => {
           </div>
           <div className="flex justify-center md:mt-20 mt-10 ">
               <Link to="/techstack">
-                  <button className="cta-button group mx-auto px-24 py-3 rounded-lg bg-white-50 text-black-200 text-lg 
+                  <button className="cta-button group mx-auto md:px-24 px-28 py-3 rounded-lg bg-white-50 text-black-200 text-lg 
                                     hover:text-white-50 hover:bg-black-200 transition-all duration-300">
                     See My Full Toolbelt
                   </button>

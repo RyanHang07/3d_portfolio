@@ -36,7 +36,7 @@ const ShowcaseSection = () => {
                     </div>
                     <div className="flex w-full justify-center md:mt-20 mt-10">
                         <Link to="/projects">
-                            <button className="cta-button group px-30 py-3 rounded-lg bg-white-50 text-black-200 text-lg 
+                            <button className="cta-button group md:px-28.5 px-32.5 py-3 rounded-lg bg-white-50 text-black-200 text-lg 
                                             hover:text-white-50 hover:bg-black-200 transition-all duration-300">
                                 See All Projects
                             </button>
