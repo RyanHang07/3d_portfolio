@@ -13,7 +13,7 @@ const Projects = () => {
         <div className="relative flex items-center justify-center mb-6" style={{ minHeight: 50 }}>
           <button
             className="cta-button group py-2 px-4 rounded-lg bg-white-50 text-black-200 md:text-base text-sm 
-                      hover:text-white-50 hover:bg-black-200 transition-all duration-300 absolute left-0 md:top-1/2 top-29 -translate-y-1/2"
+                      hover:text-white-50 hover:bg-black-200 transition-all duration-300 absolute left-0.5 md:top-1/2 top-29 -translate-y-1/2"
             onClick={() => navigate(-1)}
             style={{ minWidth: 70 }}
           >

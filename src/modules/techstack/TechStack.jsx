@@ -25,7 +25,7 @@ const TechStack = () => {
         <div className="relative flex items-center justify-center mb-6" style={{ minHeight: 50 }}>
           <button
             className="cta-button group py-2 px-4 rounded-lg bg-white-50 text-black-200 md:text-base text-sm 
-                      hover:text-white-50 hover:bg-black-200 transition-all duration-300 absolute left-0 md:top-1/2 top-29 -translate-y-1/2"
+                      hover:text-white-50 hover:bg-black-200 transition-all duration-300 absolute left-1 md:top-1/2 top-29 -translate-y-1/2"
             onClick={() => navigate(-1)}
             style={{ minWidth: 70 }}
           >
@@ -38,7 +38,7 @@ const TechStack = () => {
             />
           </div>
         </div>
-        <div className="mt-8 grid gap-6 grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9 justify-items-center">
+        <div className="mt-8 grid gap-6 grid-cols-4 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-11 justify-items-center">
           {techStackList.map((tech, idx) => (
             <div 
               key={idx} 
