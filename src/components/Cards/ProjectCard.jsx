@@ -53,12 +53,12 @@ const ProjectCard = ({ project }) => {
             {project.title}
           </h2>
           {/* Github and Link Icons */}
-          <div className="flex items-start flex-shrink-0">
+          <div className="flex items-start flex-shrink-0 pt-0.5">
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-all duration-300" style={{ color: "#d9ecff" }}>
               <img 
                 src="https://devicon-website.vercel.app/api/github/original.svg?color=%23d9ecff" 
                 alt="Github"
-                className="w-4 h-4 sm:w-5 sm:h-5"
+                className="w-5 h-5"
               /> 
             </a>
 
