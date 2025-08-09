@@ -1,36 +1,53 @@
 import TitleHeader from '../../components/TitleHeader';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import techStackList from '../../constants/techStackList';
 
 const TechStack = () => {
   const navigate = useNavigate();
+  const [activeTooltip, setActiveTooltip] = useState(null);
+
+  const handleTooltipToggle = (index) => {
+    setActiveTooltip(activeTooltip === index ? index : index);
+  };
+
+  const handleMouseEnter = (index) => {
+    setActiveTooltip(index);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveTooltip(null);
+  };
 
   return (
     <section id="techstack" className="flex-center content-container section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <div className="relative flex items-center justify-center mb-6" style={{ minHeight: 50 }}>
           <button
-            className="cta-button group py-2 px-4 rounded-lg bg-white-50 text-black-200 text-base 
-                      hover:text-white-50 hover:bg-black-200 transition-all duration-300 absolute left-0 top-1/2 -translate-y-1/2"
+            className="cta-button group py-2 px-4 rounded-lg bg-white-50 text-black-200 md:text-base text-sm 
+                      hover:text-white-50 hover:bg-black-200 transition-all duration-300 absolute left-0 md:top-1/2 top-29 -translate-y-1/2"
             onClick={() => navigate(-1)}
             style={{ minWidth: 70 }}
           >
             ← Back
           </button>
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center md:-mt-20 md:pt=0 pt-10">
             <TitleHeader
               title="Tech Stack"
               sub="🛠️ Technologies I Work With ⚡"
             />
           </div>
         </div>
-        <div className="mt-8 grid gap-6 grid-cols-3 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9 justify-items-center">
+        <div className="mt-8 grid gap-6 grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9 justify-items-center">
           {techStackList.map((tech, idx) => (
             <div 
               key={idx} 
               className="group relative flex flex-col items-center justify-center p-2 rounded-lg 
                         bg-white-50 hover:bg-black-200 transition-all duration-300 cursor-pointer
                         hover:scale-105 hover:shadow-lg w-16 h-16 sm:w-20 sm:h-20"
+              onClick={() => handleTooltipToggle(idx)}
+              onMouseEnter={() => handleMouseEnter(idx)}
+              onMouseLeave={handleMouseLeave}
             >
               <img 
                 src={tech.src}
@@ -40,9 +57,11 @@ const TechStack = () => {
               />
               
               {/* Tooltip */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black-200 text-white-50 
-                            px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 
-                            transition-opacity duration-300 pointer-events-none z-10">
+              <div className={`absolute -top-10 left-1/2 -translate-x-1/2 bg-black-200 text-white-50 
+                              px-2 py-1 rounded text-xs whitespace-nowrap transition-opacity duration-300 
+                              pointer-events-none z-10 ${
+                                activeTooltip === idx ? 'opacity-100' : 'opacity-0'
+                              }`}>
                 {tech.name}
                 <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent 
                               border-t-black-200"></div>
