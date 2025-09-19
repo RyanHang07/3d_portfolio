@@ -8,18 +8,20 @@ const Testimonials = () => {
         <div className="w-full h-full md:px-10 px-5">
             <TitleHeader title="Testimonials" sub="💃 Why People Love My Work and I 🕺" />
             <div className="lg:columns-3 md:columns=2 columns-1 mt-16">
-                {testimonials.map(({imgPath, name, mentions, review}) => (
-                    <GlowCard card={{review}}>
-                        <div className="flex items-cetner gap-3">
-                            <div className="flex-none">
-                                <img src={imgPath} alt={name} className="testimonial-img" />
+                {testimonials.map(({imgPath, name, mentions, review}, index) => (
+                    <a key={index} href={`https://www.linkedin.com/in/${mentions}`} target="_blank" rel="noopener noreferrer" className="block">
+                        <GlowCard card={{review}}>
+                            <div className="flex items-center gap-3">
+                                <div className="flex-none">
+                                    <img src={imgPath} alt={name} className="testimonial-img" />
+                                </div>
+                                <div>
+                                    <p className="font-bold">{name}</p>
+                                    <p className="text-white-50">@{mentions}</p>
+                                </div>
                             </div>
-                            <div>
-                                <p className="font-bold">{name}</p>
-                                <p className="text-white-50">{mentions}</p>
-                            </div>
-                        </div>
-                    </GlowCard>
+                        </GlowCard>
+                    </a>
                 ))}
             </div>
         </div>

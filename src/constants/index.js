@@ -202,42 +202,42 @@ const expLogos = [
 const testimonials = [
   {
     name: "Hillary Tran",
-    mentions: "@hillarytran001",
+    mentions: "hillarytran001",
     review:
       "An up-and-coming software engineer with a rare combination of technical curiosity and a genuine willingness to help others. Always eager to learn and never shies away from a challenge.",
     imgPath: "/images/testimonials/client1.png",
   },
   {
     name: "Frankie Hong",
-    mentions: "@franklin-hong",
+    mentions: "franklin-hong",
     review:
       "A fantastic collaborator who brings positive energy to every project. His ability to work independently and quickly pick up new skills makes him a standout on any team.",
     imgPath: "/images/testimonials/client2.png",
   },
   {
     name: "Eric Sun",
-    mentions: "@esun02",
+    mentions: "esun02",
     review:
       "Shows impressive initiative and drive, always going above and beyond to master new technologies. Delivers high-quality work and adapts seamlessly to new situations.",
     imgPath: "/images/testimonials/client3.png",
   },
   {
     name: "Aurelius Young",
-    mentions: "@aurelius-young-1ba660234",
+    mentions: "aurelius-young-1ba660234",
     review:
       "A true team player who also excels when working solo. His passion for software engineering and commitment to continuous learning are truly inspiring.",
     imgPath: "/images/testimonials/client5.png",
   },
   {
     name: "Julie Truong",
-    mentions: "@julie-truong-648286317",
+    mentions: "julie-truong-648286317",
     review:
       "Brings enthusiasm and dedication to every project, always ready to go the extra mile to ensure success. A pleasure to work with and a great asset to any team.",
     imgPath: "/images/testimonials/client4.png",
   },
   {
     name: "Will Vuong",
-    mentions: "@william-vuong-469182243",
+    mentions: "wgvuong",
     review:
       "Works well with others and has a relentless pursuit of knowledge. Highly recommended for any team looking for a motivated and talented software engineer!",
     imgPath: "/images/testimonials/client6.png",
